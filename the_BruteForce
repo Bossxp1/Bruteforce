@@ -11,7 +11,7 @@ dictionnary = [] # you can add a dictionnary in this link https://raw.githubuser
 
 def bruteforce(word, length):
 
-    if length <= len(mdp):
+    if length <= len(psw):
         for letter in liste:
             if psw == word + letter:
                 print("securise your password : " + word + letter)
@@ -41,6 +41,6 @@ print(' |______  /\_______  /_______  /_______  //___/\  \ |____|     |___|')
 print('        \/         \/        \/        \/       \_/                 ')
 
 
-mdp = input(" psw : ")
+psw = input(" psw : ")
 os.system("cls")
-librar()
+the_dictionnary()
