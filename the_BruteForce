@@ -6,7 +6,7 @@ liste = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', '
          'F', 'G', 'H', 'A', 'B', 'C', 'Y', 'I', 'J', 'M', 'X', 'W', 'V', 'S', 'Q', 'U', 'R', 'T', 'H', 'ù', 'N', '&',
          'é', 'K', 'ç']
 
-dictionnary = [] # you can add a dictionnary in this link https://raw.githubusercontent.com/duyet/bruteforce-database/master/1000000-password-seclists.txt
+dictionnary = []
 
 
 def bruteforce(word, length):
@@ -14,7 +14,7 @@ def bruteforce(word, length):
     if length <= len(psw):
         for letter in liste:
             if psw == word + letter:
-                print("securise your password : " + word + letter)
+                print("secure your password : " + word + letter)
                 exit()
             else:
                 print(word + letter)
@@ -25,7 +25,7 @@ def the_dictionnary():
     try:
         for key_word in dictionnary:
             if psw == key_word:
-                print("securise your password : " + key_word)
+                print("secure your password : " + key_word)
                 exit()
             else:
                 print(key_word)
