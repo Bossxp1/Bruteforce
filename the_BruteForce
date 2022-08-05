@@ -10,15 +10,16 @@ dictionnary = []
 
 
 def bruteforce(word, length):
-
+    global nb_test
     if length <= len(psw):
         for letter in liste:
             if psw == word + letter:
-                print("secure your password : " + word + letter)
+                print("secure your password : " + word + letter, '       ' + str(nb_test + 1))
                 exit()
             else:
+                nb_test = nb_test + 1
                 print(word + letter)
-                bruteforce(word + letter, length + 1)
+                bruteforce(word + letter, length + 1, '       ' + str(nb_test + 1))
 
 
 def the_dictionnary():
@@ -40,7 +41,7 @@ print(' |    |   \/    |    \/        \/        \ /     \  |    |     |   |')
 print(' |______  /\_______  /_______  /_______  //___/\  \ |____|     |___|')
 print('        \/         \/        \/        \/       \_/                 ')
 
-
+nb_test = 0
 psw = input(" psw : ")
 os.system("cls")
 the_dictionnary()
