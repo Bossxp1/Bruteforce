@@ -4,7 +4,7 @@ import os
 liste = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
          'w', 'x', 'y', 'z', 'è', 'à', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'O', 'E', 'Y', '@', 'D', 'F',
          'G', 'H', 'Z', 'A', 'L', 'B', 'C', 'Y', 'I', 'J', 'M', 'X', 'W', 'V', 'S', 'Q', 'P', 'U', 'R', 'T', 'H', 'ù',
-         'N', '&','é', 'K', 'ç']
+         'N', '&', 'é', 'K', 'ç']
 
 dictionnary = []
 
@@ -18,8 +18,8 @@ def bruteforce(word, length):
                 exit()
             else:
                 nb_test = nb_test + 1
-                print(word + letter)
-                bruteforce(word + letter, length + 1, '       ' + str(nb_test + 1))
+                print(word + letter, '       ' + str(nb_test + 1))
+                bruteforce(word + letter, length + 1)
 
 
 def the_dictionnary():
